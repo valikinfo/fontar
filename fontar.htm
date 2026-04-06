@@ -1,0 +1,212 @@
+<head>
+  <link rel="stylesheet" href="_https://fontawesome.com/v4.7/assets/font-awesome/css/font-awesome.css">
+</head>
+<div id="test-type" class="btn"><a href="http://classic.typetester.org" target="_blank">TT</a></div>
+<div id="test-js" class="btn">test</div>
+<div id="test-scr" class="btn">cyr</div>
+<!-- common colour picker -->
+<input type="color" id="picker" tabindex=-1 class="hidden">
+
+<input id="browse1" type="file" />
+<input id="browse2" type="file" />
+
+<div id="debug">font 1 displayed</div>
+
+<div id="fontbar">
+  <div id="fontbar-cont">
+    <div id="fontbar1" class="fontbar active">
+      <div id="font-list1" class="font-list">
+        <div id="list-arr1" class="list-arr"><span>v</span></div>
+        <div id="font-list-body1" class="font-list-body closed">
+          <div class="recents"></div>
+          <div class="all">
+            <div class="font-item active default">default</div>
+          </div>
+        </div>
+      </div>
+      <div id="fileopen1" class="btn fileopen">...</div>
+    </div>
+    <div class="btn btn-center" id="zindex">see font 2</div>
+    <div id="fontbar2" class="fontbar">
+      <div id="fileopen2" class="btn fileopen">...</div>
+      <div id="font-list2" class="font-list">
+        <div id="list-arr2" class="list-arr"><span>v</span></div>
+        <div id="font-list-body2" class="font-list-body closed">
+          <div class="recents"></div>
+          <div class="all">
+            <div class="font-item active default">default</div>
+          </div>
+        </div>
+      </div>
+      <div class="nofloat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toolbar">
+  <div class="toolmain font">
+    <div class="toolminus" id="fontminus"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="toolimg" id="fontbtn" title="font font">F</div>
+    <div class="toolvalue" id="font">font</div>
+    <div class="toolplus" id="fontplus"><i class="fa fa-chevron-right" aria-hidden="true" style="font-font: 9px;color:rgba(49,149,209,1)"></i></div>
+    <div class="tooltext" id="fonttext">font</div>
+    <div class="toolback" title="font font"></div>
+  </div>
+  <div class="toolmain size">
+    <div class="toolminus" id="sizeminus"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="toolimg" id="sizebtn" title="font size">S</div>
+    <div class="toolvalue" id="fontsize">size</div>
+    <div class="toolplus" id="sizeplus"><i class="fa fa-chevron-right" aria-hidden="true" style="font-size: 9px;color:rgba(49,149,209,1)"></i></div>
+    <div class="tooltext" id="fonttext">size</div>
+    <div class="toolback" title="font size"></div>
+  </div>
+  <div class="toolmain weight">
+    <div class="toolminus" id="weightminus"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="toolimg" id="weightbtn" title="font weight">B</div>
+    <div class="toolvalue" id="weight">weight</div>
+    <div class="toolplus" id="weightplus"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    <div class="tooltext" id="weighttext">weight</div>
+    <div class="toolback"></div>
+  </div>
+  <div class="toolmain italic">
+    <div class="toolminus" id="italicminus"></div>
+    <div class="toolimg" id="italicbtn" title="italic/not italic">I</div>
+    <div class="toolvalue" id="italic">style</div>
+    <div class="toolplus" id="italicplus"></div>
+    <div class="tooltext" id="italictext">italic</div>
+    <div class="toolback"></div>
+  </div>
+  <div class="toolmain decor">
+    <div class="toolminus" id="decorminus"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="toolimg" id="decorbtn" title="decoration">U</div>
+    <div class="toolvalue" id="decorsize">decoration</div>
+    <div class="toolplus" id="decorplus"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    <div class="tooltext" id="decortext">decoration</div>
+    <div class="toolback"></div>
+  </div>
+  <div class="toolmain fntclr">
+    <div class="toolminus" id="fntclrminus"></div>
+    <div class="toolimg" id="fntclrbtn" title="font colour">C</div>
+    <div class="toolvalue" id="fntclr">font colour</div>
+    <div class="toolplus" id="fntclrplus"></div>
+    <div class="tooltext" id="fntclrtext">font colour</div>
+    <div class="toolback"></div>
+  </div>
+  <div class="toolmain bgclr">
+    <div class="toolminus" id="bgclrminus"></div>
+    <!-- ** different div order matters here ** -->
+    <div class="toolplus" id="bgclrplus"></div>
+    <div class="toolimg" id="bgclrbtn"><i class="fa fa-paint-brush" aria-hidden="true" title="background colour" style="color:#e61e42"></i></div>
+    <div class="toolvalue" id="bgclr">back colour</div>
+    <div class="tooltext" id="bgclrtext">back colour</div>
+    <div class="toolback"></div>
+  </div>
+  <div class="toolmain case">
+    <div class="toolminus" id="caseminus"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="toolimg" id="casebtn" title="change case">
+      <!--<i class="fa fa-text-height" aria-hidden="true" title="case"></i>-->
+      Ab
+    </div>
+    <div class="toolvalue" id="case">case</div>
+    <div class="toolplus" id="caseplus"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    <div class="tooltext" id="casetext">case</div>
+    <div class="toolback"></div>
+  </div>
+</div>
+<div class="toolbar">
+  <div class="toolmain stretch">
+    <div class="toolminus" id="stretchminus"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </div>
+    <div class="toolimg" id="stretchbtn" title="change width">
+      <!--<i class="fa fa-text-width" aria-hidden="true"></i></div>-->
+      W
+    </div>
+    <div class="toolvalue" id="stretch">stretch</div>
+    <div class="toolplus" id="stretchplus"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    <div class="tooltext" id="stretchtext">stretch</div>
+    <div class="toolback"></div>
+  </div>
+  <div class="toolmain opacity">
+    <div class="toolminus" id="opacminus"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="toolimg" id="opacbtn" title="opacity">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+    </div>
+    <div class="toolvalue" id="opacity">opacity</div>
+    <div class="toolplus" id="opacplus"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    <div class="tooltext" id="opactext">opacity</div>
+    <div class="toolback"></div>
+  </div>
+  <div class="toolmain align">
+    <div class="toolminus" id="alignminus"><i class="fa fa-chevron-left" aria-hidden="true" title="opacity"></i></div>
+    <div class="toolimg" id="alignbtn"><i class="fa fa-align-center" aria-hidden="true" title="paragraph alignment"></i></div>
+    <div class="toolvalue" id="alignsize">alignment</div>
+    <div class="toolplus" id="alignplus"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    <div class="tooltext" id="aligntext">alignment</div>
+    <div class="toolback"></div>
+  </div>
+  <div class="toolmain line">
+    <div class="toolminus" id="lineminus"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="toolimg" id="linebtn"><i class="fa fa-arrows-v" aria-hidden="true" title="line height"></i></div>
+    <div class="toolvalue" id="linesize">line height</div>
+    <div class="toolplus" id="lineplus"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    <div class="tooltext" id="linetext">line height</div>
+    <div class="toolback"></div>
+  </div>
+  <div class="toolmain">
+    <div class="toolminus" id="letspaceminus"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="toolimg" id="letspacebtn" title="letter spacing"><i class="fa fa-sort fa-rotate-90" aria-hidden="true" style="margin-left:3px;"></i></div>
+    <div class="toolvalue" id="letspace">char space</div>
+    <div class="toolplus" id="letspaceplus"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    <div class="tooltext" id="letspacetext">char space</div>
+    <div class="toolback"></div>
+  </div>
+  <div class="toolmain">
+    <div class="toolminus" id="wordspaceminus"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="toolimg" id="wordspacebtn"><i class="fa fa-arrows-h" aria-hidden="true" title="word spacing"></i></div>
+    <div class="toolvalue" id="wordspace">word space</div>
+    <div class="toolplus" id="wordspaceplus"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    <div class="tooltext" id="wordspacetext">word space</div>
+    <div class="toolback"></div>
+  </div>
+  <div class="toolmain resize">
+    <div class="toolvalue" id="resize">resize view</div>
+    <div id="viewsizeH">
+      <div class="btn wind-size" id="viewminusH">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </div>
+      <div class="btn wind-size" id="viewplusH">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div id="viewsizeV">
+      <div class="btn wind-size" id="viewminusV">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+      </div>
+      <div class="btn wind-size" id="viewplusV">
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="d0">
+  <div id="d11" class="d1">
+    <div id="d21" class="d2" contenteditable="true" spellcheck="false">
+      Those who saw him hushed. On Church Street. Liberty. Cortlandt. West Street. Fulton. Vesey. It was a silence that heard itself, awful and beautiful. Some thought at first that it must have been a trick of the light, something to do with the weather, an accident of shadow fall. [...] Up there, at the height of a hundred and ten stories, utterly still, a dark toy against the cloudy sky.
+      <br />Те, кто видел его, замирали. На Чёрч-стрит. Либерти. Кортландт. Уэст-стрит. Фултон. Виси. И тишина, величественная и прекрасная, слышала саму себя. Кто-то поначалу думал, что перед ним, должно быть, лишь игра света, атмосферный трюк, случайный всплеск тени. [...] Там, на высоте ста десяти этажей, — совершенно неподвижное, игрушечное пятнышко в облачном небе.
+    </div>
+  </div>
+  <div id="d12" class="d1">
+    <div id="d22" class="d2" contenteditable="true" spellcheck="false">
+      Those who saw him hushed. On Church Street. Liberty. Cortlandt. West Street. Fulton. Vesey. It was a silence that heard itself, awful and beautiful. Some thought at first that it must have been a trick of the light, something to do with the weather, an accident of shadow fall. [...] Up there, at the height of a hundred and ten stories, utterly still, a dark toy against the cloudy sky.
+      <br />Те, кто видел его, замирали. На Чёрч-стрит. Либерти. Кортландт. Уэст-стрит. Фултон. Виси. И тишина, величественная и прекрасная, слышала саму себя. Кто-то поначалу думал, что перед ним, должно быть, лишь игра света, атмосферный трюк, случайный всплеск тени. [...] Там, на высоте ста десяти этажей, — совершенно неподвижное, игрушечное пятнышко в облачном небе.
+    </div>
+  </div>
+</div>
+
+<div style="width:100%;position:absolute;bottom:-180px;background-color:#fff;border-top:1px solid #888;z-index:1000;">
+  <a href="https://www.w3schools.com/cssref/pr_font_font-family.asp" target="_blank">W3C font properties</a><br />
+  <a href="https://jshint.com" target="_blank">JSHint</a><br />
+  <a href="https://fontawesome.com/v4.7/examples/" target="_blank">fontawesome examples</a>
+</div>
+<div id="test-scr1"></div>
